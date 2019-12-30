@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+
+
+% \documentclass{standalone}
+
+\usepackage{geometry}
+% \usepackage[showframe]{geometry}
+% \usepackage{show}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled=1]{helvet}
+\usepackage[helvet]{sfmath}
+\everymath={\sf}
+
+
+\geometry{
+paperwidth=11in,
+paperheight=8.5in,
+margin=0.2in
+}
+
+\usepackage{xcolor}
+\usepackage{pagecolor}
+% \usepackage{CUcolors}
+
+\pagenumbering{gobble}
+% \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+
+% \usepackage[size=custom,width=100, height=70, scale=1, orientation=portrait]{beamerposter} % Use the beamerposter package for laying out the poster with a portrait orientation and an a0 paper size
+
+% \usetheme{DPW} 
+
+% \usepackage[english]{babel} % English language/hyphenation
+
+% \usepackage{amsmath,amsthm,amssymb,latexsym} % For including math equations, theorems, symbols, etc
+% \usepackage[export]{adjustbox}
+
+% %this allows me to get 
+% %\usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+
+
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{DarkGray}}
+
+
+% \tikzset{>=latex}
+
+
+% \usepackage{times}\usefonttheme{professionalfonts}  % Uncomment to use Times as the main font
+
+
+% % \graphicspath{{../}} % Location of the graphics files
+
+% \definecolor{G}{RGB}{76, 132, 59}
+
+
+% \usecaptiontemplate{\small\structure{\insertcaptionname~\insertcaptionnumber: }\insertcaption} % A fix for figure numbering
+
+
+% \title{\Huge Diversity Preview Weekend}%(\protect{\itshape{Triticum aestivum}})}
+
+% \author{Who we are} % Author(s)
+
+% \institute{Cornell University, Ithaca NY} % Institution(s)
+
+% \newcommand{\leftfoot}{} % Left footer text
+
+% \newcommand{\rightfoot}{www.cornelldpw.org} % Right footer text
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\centering 
+\Huge{\textbf{Diversity Preview Weekend}}
+% \vspace{0.5cm}
+\hspace{-0.5cm} \noindent \begin{tikzpicture}
+\node (hold) at (0, 0){};
+\node (map) at (3, 0) {\includegraphics[width = 0.6\linewidth, clip , trim = 0.8cm 4cm 0cm 4cm]{"\string~/Dropbox/DPWstats/acceptFreqCU"}};
+\node (where) at (0, 5.5){\Large{\textbf{Where we come from (2017--2019)}}};
+% \node[below right] at (current bounding box.south west) {\textbf{Image 1: rectangles}};
+\node (pr) at (4.35,  -4.5) {\tiny{PR}};
+\node (hi) at (1,  -3.8) {\tiny{HI}};
+\node (ak) at (-1,  -3.8) {\tiny{AK}};
+
+\draw[dashed, draw=DarkGray] (-5, -5) -- (11.4, -5);
+
+\draw[dashed, draw=DarkGray] (11.4, -13) -- (11.4, 5);
+
+% \node (race) at (0, 0) {\includegraphics{"\string~/Dropbox/DPWstats/raceEthnicity"}};
+
+\node (who) at (16.5, 5.5){\Large{\textbf{Who we are (2017--2019)}}};
+
+\node (gender) at (16, 1.5) {\includegraphics[width = 0.3\linewidth]{"\string~/Dropbox/DPWstats/peopleGraphics/peopleBarChart"}};
+
+\node (otherstats) at (16.5, -4) {\includegraphics[width = 0.32\linewidth]{"\string~/Dropbox/DPWstats/barStatsHorizCount"}};
+
+\node (race) at (16.8, -10) {\includegraphics[width = 0.37\linewidth, clip , trim = 3.5cm 3cm 0cm 2cm]{"\string~/Dropbox/DPWstats/raceEthnicity"}};
+
+
+\node (edu) at (2, -6){\Large{\textbf{Our continuing education since DPW (2017--2018)$^*$}}};
+
+\node (Ast) at (2,  -12.9) {\scalebox{.8}{\tiny {$^*$Results from follow-up surveys that do not yet include DPW 2019}}};
+
+\node (status) at (-0.5, -10) {\includegraphics[width = 0.37\linewidth, clip , trim = 3.5cm 3cm 0cm 2cm]{"\string~/Dropbox/DPWstats/currentStatus"}};
+\node (atCU) at (8.7, -10) {\includegraphics[width = 0.37\linewidth, clip , trim = 3.5cm 3cm 0cm 2cm]{"\string~/Dropbox/DPWstats/atCU"}};
+
+
+
+\node (school) at (-2.5,  -6.9) {\footnotesize{Current Degree Program}};
+\node (uni) at (6.5,  -6.9) {\footnotesize{University}};
+
+
+\node (raceLab) at (14.6,  -6.9) {\footnotesize{Race and Ethnicity$^\dag$}};
+\node (raceLabAst) at (18.3,  -12.9) {\scalebox{.8}{\tiny {$^\dag$Participants may identify with more than one race/ethnicity}}};
+\node (groups) at (17,  -2) {\footnotesize{Groups}};
+\node (genderLab) at (17,  4.8) {\footnotesize{Gender}};
+% \node (school) at (0.5,  -3.8) {\tiny{School}};
+
+
+% \draw[dashed, draw=DarkGray] (8, -12) -- (8, -6);
+
+
+
+
+\end{tikzpicture}
+
+% \end{block}
+
+
+% \end{column}
+
+% ---------------------------------------------------------------------
+%                   spacer
+% ---------------------------------------------------------------------
+
+% \begin{column}{.02\textwidth}\end{column} % Empty spacer column
+
+% ---------------------------------------------------------------------
+%                   second column
+% ---------------------------------------------------------------------
+
+% \begin{column}{.28\textwidth} 
+
+
+% \begin{block}{Race and Ethnicity}
+% \begin{tikzpicture}
+
+  % \colorbox{white}{\includegraphics[width = 0.9\linewidth, frame]{"\string~/Dropbox/MasterGenotypeswithOHMI/CircleManhattan"}}
+% \end{tikzpicture}
+
+% \end{block}
+
+
+% \begin{block}{Gender Identity}
+% \begin{tikzpicture}
+
+  % \colorbox{white}{\includegraphics[width = 0.9\linewidth, frame]{"\string~/Dropbox/MasterGenotypeswithOHMI/CircleManhattan"}}
+% \end{tikzpicture}
+
+% \end{block}
+
+% \end{column}
+
+
+
+% \setbeamercolor{block title}{fg=DarkGray,bg=LightGray} % 
+
+
+% %----------------------------------------------------------------------------------------
+
+
+% \begin{column}{.015\textwidth}\end{column} % Empty spacer column
+
+% \end{columns} % End of all the columns in the poster
+
+% \end{frame}
+
+\end{document}
